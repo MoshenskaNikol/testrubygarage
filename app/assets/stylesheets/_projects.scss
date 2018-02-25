@@ -1,0 +1,32 @@
+.project-name, .project-name-edit {
+  display: inline-block;
+}
+
+.project-add {
+  @extend .btn, .btn-primary;
+}
+
+.projects {
+  @extend .text-center;
+}
+
+.projects > * {
+  @extend .text-left;
+}
+
+.project-name-edit {
+  color: $text-color;
+}
+
+.project .panel-body {
+  padding-top: 0px;
+}
+
+.project-edit,
+.project-delete {
+  color: $gray-lighter;
+
+  &:hover {
+    color: $gray-light;
+  }
+}

@@ -1,0 +1,42 @@
+.task-status, .task-name, .task-name-edit {
+  display: inline-block;
+}
+
+.task-add {
+  @extend .btn, .btn-success;
+}
+
+.task-add-plus {
+  @extend .btn, .btn-default;
+}
+
+.tasks > ul {
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-top: 5px;
+}
+
+.tasks {
+  margin-top: 5px;
+}
+
+.task {
+  border-bottom: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.tasks > ul > li:last-child > .task {
+  border-bottom: none;
+}
+
+.task-controls > * {
+  color: $gray;
+
+  &:hover {
+    color: $gray-darker;
+  }
+}
+
+.task-name, .task-name-edit {
+  margin-left: 10px;
+}
