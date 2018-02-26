@@ -58,6 +58,7 @@ gem 'webpacker'
 # Boostrap
 gem 'react-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'jquery-rails'
 
 # Authentication
