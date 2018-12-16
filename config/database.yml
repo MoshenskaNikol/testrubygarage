@@ -5,8 +5,13 @@ default: &default
 
 development:
   <<: *default
-  database: test1
+  database: rubytodo
+  user: root
+  password: 12345
 
 production:
   <<: *default
-  database: ENV['DATABASE_URL']
+  username: <%= ENV.fetch("DB_USERNAME") {""} %>
+  password: <%= ENV.fetch("DB_PASSWORD") {""} %>
+  database: rubytodo
+  host:   <%= ENV.fetch("DB_SOCKET") {""} %>

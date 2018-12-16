@@ -1,0 +1,12 @@
+entrypoint: bundle exec rackup --port $PORT
+env: flex
+runtime: ruby
+env_variables:
+  SECRET_KEY_BASE: secret
+  DB_USERNAME: username
+  DB_PASSWORD: password
+  DB_SOCKET: /cloudsql/rubytodo:europe-west3:rubytodo-sql-instance
+  RAILS_ENV: production
+
+beta_settings:
+  cloud_sql_instances: rubytodo:europe-west3:rubytodo-sql-instance
