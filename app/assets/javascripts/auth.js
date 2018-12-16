@@ -21,7 +21,7 @@ function fillIn(email, password) {
             if (index === password.length) {
                 index = 0;
                 ++fieldIndex;
-                if (window.location.href.endsWith('sign_up')) {
+                if (window.location.href.includes('sign_up')) {
                     document.querySelector('#user_password_confirmation').focus();
                 } else {
                     ++fieldIndex;
@@ -83,7 +83,7 @@ function authFillInCredentials() {
         if (localStorage.getItem('registered') == null) {
             localStorage.setItem('email', randomizeEmail());
             localStorage.setItem('password', randomizePassword());
-            if (!window.location.href.endsWith('sign_up')) {
+            if (!window.location.href.includes('sign_up')) {
                 document.querySelector('.auth-links a').click();
             } else {
                 let email = localStorage.getItem('email');
@@ -93,7 +93,7 @@ function authFillInCredentials() {
                 }
             }
         } else {
-            if (window.location.href.endsWith('sign_up')) {
+            if (window.location.href.includes('sign_up')) {
                 document.querySelector('.auth-links a').click();
             } else {
                 let email = localStorage.getItem('email');

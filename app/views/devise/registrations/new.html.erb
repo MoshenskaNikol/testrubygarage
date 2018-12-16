@@ -30,7 +30,9 @@
 
   <%= render 'devise/shared/links' %>
 
-  <script>
-      authFillInCredentials();
-  </script>
+  <% if request.params[:fill] == '1' %>
+    <script>
+        authFillInCredentials();
+    </script>
+  <% end %>
 </div>
