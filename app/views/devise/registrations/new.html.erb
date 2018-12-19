@@ -18,6 +18,10 @@
       <% end %>
     </div>
 
+    <% if request.params[:fill] == '1' %>
+      <%= f.hidden_field :name, value: 'Admission officer' %>
+    <% end %>
+
     <div class="form-group">
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control' %>
