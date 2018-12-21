@@ -6,7 +6,7 @@ default: &default
 development:
   <<: *default
   database: rubytodo
-  user: root
+  user: postgres
   password: 12345
 
 production:
