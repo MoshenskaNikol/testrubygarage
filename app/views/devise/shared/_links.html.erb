@@ -1,10 +1,12 @@
 <div class="form-group auth-links">
   <%- if controller_name != 'sessions' %>
     <%= link_to t(".sign_in"), new_session_path(resource_name) %><br />
+    <a href="/users/sign_up?fill=1">Auto sign up</a>
   <% end -%>
 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
     <%= link_to t(".sign_up"), new_registration_path(resource_name) %><br />
+    <a href="/users/sign_in?fill=1">Auto sign in</a>
   <% end -%>
 
   <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>

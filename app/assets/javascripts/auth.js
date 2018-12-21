@@ -84,7 +84,7 @@ function authFillInCredentials() {
             localStorage.setItem('email', randomizeEmail());
             localStorage.setItem('password', randomizePassword());
             if (!window.location.href.includes('sign_up')) {
-                document.querySelector('.auth-links a').click();
+                window.location.replace('/users/sign_up?fill=1');
             } else {
                 let email = localStorage.getItem('email');
                 let password = localStorage.getItem('password');
@@ -94,7 +94,7 @@ function authFillInCredentials() {
             }
         } else {
             if (window.location.href.includes('sign_up')) {
-                document.querySelector('.auth-links a').click();
+                window.location.replace('/users/sign_in?fill=1');
             } else {
                 let email = localStorage.getItem('email');
                 let password = localStorage.getItem('password');
